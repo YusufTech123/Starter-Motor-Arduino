@@ -35,10 +35,6 @@ void loop() {
     digitalWrite(relayMesin, LOW);
     digitalWrite(relaySpeed, LOW);
     delay(2000);
-    lcd.setCursor(0,0);
-    lcd.print("MENGHIDUPKAN");
-    lcd.setCursor(0,1);
-    lcd.print("MOTOR...");
     digitalWrite(relayRem, LOW);
     delay(500);
     digitalWrite(relayStarter, LOW);
@@ -46,25 +42,10 @@ void loop() {
     digitalWrite(relayStarter, HIGH);
     digitalWrite(relayRem, HIGH);
     delay(1000);
-    lcd.clear();
-    lcd.setCursor(0,0);
-    lcd.print("MOTOR HIDUP");
-    delay(1000);
-    lcd.clear();
   }
     if ( perintah == 'S' ) {
-      lcd.setCursor(0,0);
-      lcd.print("MEMATIKAN");
-      lcd.setCursor(0,1);
-      lcd.print("MOTOR");
-      delay(1000);
       digitalWrite(relayMesin, HIGH);
       digitalWrite(relaySpeed, HIGH);
-      lcd.clear();
-      lcd.setCursor(0,0);
-      lcd.print("MOTOR MATI");
-      delay(1000);
-      lcd.clear();
     }
   }
 }
